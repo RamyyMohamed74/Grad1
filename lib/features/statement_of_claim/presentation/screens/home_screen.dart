@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'case_chat_screen.dart';
 
 
 
@@ -75,12 +75,10 @@ class HomeScreen extends StatelessWidget {
                           width: double.infinity,
                           child: FilledButton.icon(
                             onPressed: () {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text(
-                                    'Great! The case assistant '
-                                    'is our next step.',
-                                  ),
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const CaseChatScreen(),
                                 ),
                               );
                             },
